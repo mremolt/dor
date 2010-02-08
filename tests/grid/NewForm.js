@@ -1,15 +1,15 @@
-dojo.provide("wma.tests.grid.NewForm");
+dojo.provide("dor.tests.grid.NewForm");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.NewForm");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.NewForm");
 
 
-wma.test.Suite.register("wma.tests.grid.NewForm", [
+dor.test.Suite.register("dor.tests.grid.NewForm", [
 {
-    name: 'A wma.grid.NewForm should be created',
+    name: 'A dor.grid.NewForm should be created',
     runTest: function(doh) {
-        var form = new wma.grid.NewForm();
-        doh.assertTrue(form instanceof wma.grid.NewForm);
+        var form = new dor.grid.NewForm();
+        doh.assertTrue(form instanceof dor.grid.NewForm);
     }
 }
 ]);

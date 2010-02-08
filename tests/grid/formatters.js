@@ -1,10 +1,10 @@
-dojo.provide("wma.tests.grid.formatters");
+dojo.provide("dor.tests.grid.formatters");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.formatters");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.formatters");
 
 
-wma.test.Suite.register("wma.tests.grid.formatters", [
+dor.test.Suite.register("dor.tests.grid.formatters", [
 {
     name: 'germanDate should return "unbekannt" if no Date is provided',
     runTest: function(doh) {

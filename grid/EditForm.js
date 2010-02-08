@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.EditForm');
+dojo.provide('dor.grid.EditForm');
 
 dojo.require('dijit.form.Form');
 
 dojo.declare(
-    'wma.grid.EditForm',
+    'dor.grid.EditForm',
     dijit.form.Form,
     {
         grid: null,

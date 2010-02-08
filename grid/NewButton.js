@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.NewButton');
+dojo.provide('dor.grid.NewButton');
 
 dojo.require('dijit.form.Button');
 
 dojo.declare(
-    'wma.grid.NewButton',
+    'dor.grid.NewButton',
     dijit.form.Button,
     {
         dialog: '',

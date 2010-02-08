@@ -1,11 +1,11 @@
-dojo.provide('wma.grid.SearchForm');
+dojo.provide('dor.grid.SearchForm');
 
 dojo.require('dijit.form.Form');
 dojo.require('dijit.form.TextBox');
 dojo.require('dijit.form.Button');
 
 dojo.declare(
-    'wma.grid.SearchForm',
+    'dor.grid.SearchForm',
     dijit.form.Form,
     {
         pagingContainer: '',

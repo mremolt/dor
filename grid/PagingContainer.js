@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.PagingContainer');
+dojo.provide('dor.grid.PagingContainer');
 
 dojo.require('dijit.layout.ContentPane');
 
 dojo.declare(
-    'wma.grid.PagingContainer',
+    'dor.grid.PagingContainer',
     dijit.layout.ContentPane,
     {
         page: null,

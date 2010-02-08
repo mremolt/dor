@@ -1,7 +1,7 @@
-dojo.provide("wma.tests.grid.DeleteButton");
+dojo.provide("dor.tests.grid.DeleteButton");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.DeleteButton");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.DeleteButton");
 
 factory.deleteButton = function(params) {
     var options = {
@@ -9,17 +9,17 @@ factory.deleteButton = function(params) {
     };
 
     dojo.mixin(options, params || {} );
-    var button = new wma.grid.DeleteButton(options);
+    var button = new dor.grid.DeleteButton(options);
     dijit.byId('testsContainer').addChild(button);
     return button;
 }
 
-wma.test.Suite.register("wma.tests.grid.DeleteButton", [
+dor.test.Suite.register("dor.tests.grid.DeleteButton", [
 {
-    name: 'A wma.grid.DeleteButton should be created',
+    name: 'A dor.grid.DeleteButton should be created',
     runTest: function(doh) {
-        var button = new wma.grid.DeleteButton();
-        doh.assertTrue(button instanceof wma.grid.DeleteButton);
+        var button = new dor.grid.DeleteButton();
+        doh.assertTrue(button instanceof dor.grid.DeleteButton);
     }
 },
 {

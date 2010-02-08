@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.ItemDialog');
+dojo.provide('dor.grid.ItemDialog');
 
 dojo.require('dijit.Dialog');
 
 dojo.declare(
-    'wma.grid.ItemDialog',
+    'dor.grid.ItemDialog',
     dijit.Dialog,
     {
         item: null,

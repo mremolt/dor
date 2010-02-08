@@ -1,7 +1,7 @@
-dojo.provide("wma.tests.grid.NewButton");
+dojo.provide("dor.tests.grid.NewButton");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.NewButton");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.NewButton");
 
 
 factory.newButton = function(params) {
@@ -9,17 +9,17 @@ factory.newButton = function(params) {
         dialog: 'newDialog'
     };
     dojo.mixin(options, params || {} );
-    var button = new wma.grid.NewButton(options);
+    var button = new dor.grid.NewButton(options);
     dijit.byId('testsContainer').addChild(button);
     return button;
 }
 
-wma.test.Suite.register("wma.tests.grid.NewButton", [
+dor.test.Suite.register("dor.tests.grid.NewButton", [
     {
-        name: 'A wma.grid.NewButton should be created',
+        name: 'A dor.grid.NewButton should be created',
         runTest: function(doh) {
             var button = factory.newButton();
-            doh.assertTrue(button instanceof wma.grid.NewButton);
+            doh.assertTrue(button instanceof dor.grid.NewButton);
         }
     },
     {

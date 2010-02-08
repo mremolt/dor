@@ -1,15 +1,15 @@
-dojo.provide("wma.tests.grid.RailsRestStore");
+dojo.provide("dor.tests.grid.RailsRestStore");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.RailsRestStore");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.RailsRestStore");
 
 
-wma.test.Suite.register("wma.tests.grid.RailsRestStore", [
+dor.test.Suite.register("dor.tests.grid.RailsRestStore", [
 {
-    name: 'A wma.grid.RailsRestStore should be created',
+    name: 'A dor.grid.RailsRestStore should be created',
     runTest: function(doh) {
-        var store = new wma.grid.RailsRestStore({ target: '/admin/test' });
-        doh.assertTrue(store instanceof wma.grid.RailsRestStore);
+        var store = new dor.grid.RailsRestStore({ target: '/admin/test' });
+        doh.assertTrue(store instanceof dor.grid.RailsRestStore);
     }
 }
 ]);

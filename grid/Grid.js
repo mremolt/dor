@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.Grid');
+dojo.provide('dor.grid.Grid');
 
 dojo.require('dojox.grid.DataGrid');
 
 dojo.declare(
-    'wma.grid.Grid',
+    'dor.grid.Grid',
     dojox.grid.DataGrid,
     {
         dialog: '',
@@ -42,4 +42,4 @@ dojo.declare(
             }
         }
     });
-wma.grid.Grid.markupFactory = dojox.grid.DataGrid.markupFactory;
+dor.grid.Grid.markupFactory = dojox.grid.DataGrid.markupFactory;

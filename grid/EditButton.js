@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.EditButton');
+dojo.provide('dor.grid.EditButton');
 
 dojo.require('dijit.form.Button');
 
 dojo.declare(
-    'wma.grid.EditButton',
+    'dor.grid.EditButton',
     dijit.form.Button,
     {
         grid: '',

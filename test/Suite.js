@@ -1,9 +1,9 @@
-dojo.provide('wma.test.Suite');
+dojo.provide('dor.test.Suite');
 
 //dojo.require('dijit.form.Button');
 dojo.require("doh.runner");
 
- wma.test.Suite = {
+ dor.test.Suite = {
     _testTemplate: {
         setUp: function() {
             var container = dijit.byId('testsContainer');
@@ -21,7 +21,7 @@ dojo.require("doh.runner");
     register: function(group, tests) {
         var wrappedTests = [];
         dojo.forEach(tests, function(test) {
-            wrappedTests.push(dojo.mixin(dojo.clone(wma.test.Suite._testTemplate), test));
+            wrappedTests.push(dojo.mixin(dojo.clone(dor.test.Suite._testTemplate), test));
         });
         doh.register(group, wrappedTests);
     },

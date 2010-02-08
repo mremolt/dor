@@ -1,7 +1,7 @@
-dojo.provide("wma.tests.grid.EditButton");
+dojo.provide("dor.tests.grid.EditButton");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.EditButton");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.EditButton");
 dojo.require("dijit.Dialog");
 dojo.require('dojo.data.ItemFileReadStore');
 dojo.require('dojox.grid.DataGrid');
@@ -13,17 +13,17 @@ factory.editButton = function(params) {
     };
 
     dojo.mixin(options, params || {} );
-    var button = new wma.grid.EditButton(options);
+    var button = new dor.grid.EditButton(options);
     dijit.byId('testsContainer').addChild(button);
     return button;
 }
 
-wma.test.Suite.register("wma.tests.grid.EditButton", [
+dor.test.Suite.register("dor.tests.grid.EditButton", [
 {
-    name: 'A wma.grid.EditButton should be created',
+    name: 'A dor.grid.EditButton should be created',
     runTest: function(doh) {
-        var button = new wma.grid.EditButton();
-        doh.assertTrue(button instanceof wma.grid.EditButton);
+        var button = new dor.grid.EditButton();
+        doh.assertTrue(button instanceof dor.grid.EditButton);
     }
 },
 {

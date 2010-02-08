@@ -1,9 +1,9 @@
-dojo.provide("wma.tests.module");
+dojo.provide("dor.tests.module");
 
-dojo.require('wma.test.Suite');
+dojo.require('dor.test.Suite');
 dojo.require('dojo.data.ItemFileWriteStore');
 dojo.require("dijit.layout.BorderContainer");
-dojo.require("wma.grid.ItemDialog");
+dojo.require("dor.grid.ItemDialog");
 
 
 // Factories
@@ -39,15 +39,15 @@ factory.store = function(params) {
     return store;
 }
 
-// factory for wma.tests.toasterMock
+// factory for dor.tests.toasterMock
 factory.toasterMock = function(params) {
-    var mock = new wma.tests.toasterMock(params);
+    var mock = new dor.tests.toasterMock(params);
     dijit.byId('testsContainer').addChild(mock);
     return mock
 }
 
 factory.gridMock = function(params) {
-    var mock = new wma.tests.gridMock(params);
+    var mock = new dor.tests.gridMock(params);
     dijit.byId('testsContainer').addChild(mock);
     return mock;
 }
@@ -59,7 +59,7 @@ factory.itemDialog = function(params) {
         itemLabel: 'name'
     };
     dojo.mixin(options, params || {} );
-    var dialog = new wma.grid.ItemDialog(options);
+    var dialog = new dor.grid.ItemDialog(options);
     dijit.byId('testsContainer').addChild(dialog);
     return dialog;
 }
@@ -80,14 +80,14 @@ factory.pagingContainer = function(params) {
     };
 
     dojo.mixin(options, params || {} );
-    var container = new wma.grid.PagingContainer(options);
+    var container = new dor.grid.PagingContainer(options);
     dijit.byId('testsContainer').addChild(container);
     return container;
 }
 
-// mock for wma.grid.Grid
-wma.test.Suite.addWidgetMock(
-    'wma.tests.gridMock',
+// mock for dor.grid.Grid
+dor.test.Suite.addWidgetMock(
+    'dor.tests.gridMock',
     {
         editSelectedItem: function() {
             window.editSelectedItemCalled = true;
@@ -102,8 +102,8 @@ wma.test.Suite.addWidgetMock(
     );
 
 // mock for dojox.widget.Toaster
-wma.test.Suite.addWidgetMock(
-    'wma.tests.toasterMock',
+dor.test.Suite.addWidgetMock(
+    'dor.tests.toasterMock',
     {
         messages: [],
 
@@ -118,17 +118,17 @@ wma.test.Suite.addWidgetMock(
     );
 
 try {
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.NewButton");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.EditButton");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.DeleteButton");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.RailsRestStore");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.Grid");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.ItemDialog");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.PagingContainer");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.NewForm");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.EditForm");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.SearchForm");
-    dojo.requireIf(dojo.isBrowser, "wma.tests.grid.formatters");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.NewButton");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.EditButton");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.DeleteButton");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.RailsRestStore");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.Grid");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.ItemDialog");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.PagingContainer");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.NewForm");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.EditForm");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.SearchForm");
+    dojo.requireIf(dojo.isBrowser, "dor.tests.grid.formatters");
 } catch(e) {
     doh.debug(e);
 }

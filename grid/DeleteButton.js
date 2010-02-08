@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.DeleteButton');
+dojo.provide('dor.grid.DeleteButton');
 
 dojo.require('dijit.form.Button');
 
 dojo.declare(
-    'wma.grid.DeleteButton',
+    'dor.grid.DeleteButton',
     dijit.form.Button,
     {
         grid: '',

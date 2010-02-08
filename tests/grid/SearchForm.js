@@ -1,7 +1,7 @@
-dojo.provide("wma.tests.grid.SearchForm");
+dojo.provide("dor.tests.grid.SearchForm");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.SearchForm");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.SearchForm");
 
 
 factory.searchForm = function(params) {
@@ -10,21 +10,21 @@ factory.searchForm = function(params) {
     };
 
     dojo.mixin(options, params || {} );
-    var container = new wma.grid.SearchForm(options);
+    var container = new dor.grid.SearchForm(options);
     dijit.byId('testsContainer').addChild(container);
     return container;
 }
 
-wma.test.Suite.register("wma.tests.grid.SearchForm", [
+dor.test.Suite.register("dor.tests.grid.SearchForm", [
 {
-    name: 'A wma.grid.SearchForm should be created',
+    name: 'A dor.grid.SearchForm should be created',
     runTest: function(doh) {
-        var form = new wma.grid.SearchForm();
-        doh.assertTrue(form instanceof wma.grid.SearchForm);
+        var form = new dor.grid.SearchForm();
+        doh.assertTrue(form instanceof dor.grid.SearchForm);
     }
 },
 {
-    name: 'A wma.grid.SearchForm should contain a TextBox named query',
+    name: 'A dor.grid.SearchForm should contain a TextBox named query',
     runTest: function(doh) {
         var pagingContainer = factory.pagingContainer();
         var form = factory.searchForm();
@@ -35,7 +35,7 @@ wma.test.Suite.register("wma.tests.grid.SearchForm", [
     }
 },
 {
-    name: 'A wma.grid.SearchForm should contain a submit button',
+    name: 'A dor.grid.SearchForm should contain a submit button',
     runTest: function(doh) {
         var pagingContainer = factory.pagingContainer();
         var form = factory.searchForm();
@@ -46,7 +46,7 @@ wma.test.Suite.register("wma.tests.grid.SearchForm", [
     }
 },
 {
-    name: 'A wma.grid.SearchForm should contain a reset button',
+    name: 'A dor.grid.SearchForm should contain a reset button',
     runTest: function(doh) {
         var pagingContainer = factory.pagingContainer();
         var form = factory.searchForm();

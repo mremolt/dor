@@ -1,13 +1,13 @@
-dojo.provide("wma.tests.grid.Grid");
-dojo.require("wma.grid.ItemDialog");
-dojo.require("wma.grid.Grid");
+dojo.provide("dor.tests.grid.Grid");
+dojo.require("dor.grid.ItemDialog");
+dojo.require("dor.grid.Grid");
 
 factory.dialog = function(params) {
     var options = {
         id: 'dialog'
     };
     dojo.mixin(options, params || {} );
-    var dialog = new wma.grid.ItemDialog(options);
+    var dialog = new dor.grid.ItemDialog(options);
     dijit.byId('testsContainer').addChild(dialog);
     return dialog;
 }
@@ -31,22 +31,22 @@ factory.grid = function(params) {
         pagingContainer: 'pagingContainer'
     };
     dojo.mixin(options, params || {} );
-    var grid = new wma.grid.Grid(options);
+    var grid = new dor.grid.Grid(options);
     dijit.byId('testsContainer').addChild(grid);
     grid.startup();
     return grid;
 }
 
-wma.test.Suite.register("wma.tests.grid.Grid", [
+dor.test.Suite.register("dor.tests.grid.Grid", [
     {
-        name: 'A wma.grid.Grid should be created',
+        name: 'A dor.grid.Grid should be created',
         runTest: function(doh) {
-            var grid = new wma.grid.Grid();
-            doh.assertTrue(grid instanceof wma.grid.Grid);
+            var grid = new dor.grid.Grid();
+            doh.assertTrue(grid instanceof dor.grid.Grid);
         }
     },
     {
-        name: 'A wma.grid.Grid should open the provided dialog when one item is selected',
+        name: 'A dor.grid.Grid should open the provided dialog when one item is selected',
         runTest: function(doh) {
             var dialog = factory.dialog({id: 'dialog'});
             var grid = factory.grid({dialog: 'dialog'});
@@ -56,7 +56,7 @@ wma.test.Suite.register("wma.tests.grid.Grid", [
         }
     },
     {
-        name: 'A wma.grid.Grid should transfer the selected item to the dialog',
+        name: 'A dor.grid.Grid should transfer the selected item to the dialog',
         runTest: function(doh) {
             var dialog = factory.dialog({id: 'dialog'});
             var grid = factory.grid({dialog: 'dialog'});
@@ -68,7 +68,7 @@ wma.test.Suite.register("wma.tests.grid.Grid", [
         }
     },
     {
-        name: 'wma.grid.Grid.editSelectedItem() should call setContent on Toaster if no item is selected',
+        name: 'dor.grid.Grid.editSelectedItem() should call setContent on Toaster if no item is selected',
         runTest: function(doh) {
             var toaster = factory.toasterMock({id: 'toaster'});
             var grid = factory.grid({toaster: 'toaster'});
@@ -80,7 +80,7 @@ wma.test.Suite.register("wma.tests.grid.Grid", [
         }
     },
     {
-        name: 'wma.grid.Grid.deleteSelectedItems() should delete the selected item',
+        name: 'dor.grid.Grid.deleteSelectedItems() should delete the selected item',
         runTest: function(doh) {
             var toaster = factory.toasterMock({id: 'toaster'});
             var pagingContainer = factory.pagingContainer({ id: 'pagingContainer'});
@@ -103,7 +103,7 @@ wma.test.Suite.register("wma.tests.grid.Grid", [
         }
     },
     {
-        name: 'wma.grid.Grid.deleteSelectedItems() should delete multiple selected items',
+        name: 'dor.grid.Grid.deleteSelectedItems() should delete multiple selected items',
         runTest: function(doh) {
             var toaster = factory.toasterMock({id: 'toaster'});
             var pagingContainer = factory.pagingContainer({ id: 'pagingContainer'});
@@ -115,7 +115,7 @@ wma.test.Suite.register("wma.tests.grid.Grid", [
                 //Select the first 2 items for deleting
                 grid.selection.selectRange(0, 1);
 
-                wma.test.Suite.runConfirmed(function() {
+                dor.test.Suite.runConfirmed(function() {
                     grid.deleteSelectedItems();
                 });
 

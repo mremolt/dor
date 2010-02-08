@@ -1,9 +1,9 @@
-dojo.provide('wma.grid.RailsRestStore');
+dojo.provide('dor.grid.RailsRestStore');
 
 dojo.require('dojox.data.JsonRestStore');
 
 dojo.declare(
-    'wma.grid.RailsRestStore',
+    'dor.grid.RailsRestStore',
     dojox.data.JsonRestStore,
     {
         id: "restStore",

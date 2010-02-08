@@ -1,7 +1,7 @@
-dojo.provide("wma.tests.grid.EditForm");
+dojo.provide("dor.tests.grid.EditForm");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.EditForm");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.EditForm");
 dojo.require("dijit.form.TextBox");
 
 factory.editForm = function(params) {
@@ -10,7 +10,7 @@ factory.editForm = function(params) {
     };
 
     dojo.mixin(options, params || {} );
-    var form = new wma.grid.EditForm(options);
+    var form = new dor.grid.EditForm(options);
     dijit.byId('testsContainer').addChild(form);
     var formDiv = document.createElement("div");
     form.domNode.appendChild(formDiv);
@@ -26,12 +26,12 @@ factory.editForm = function(params) {
     return form;
 }
 
-wma.test.Suite.register("wma.tests.grid.EditForm", [
+dor.test.Suite.register("dor.tests.grid.EditForm", [
 {
-    name: 'A wma.grid.EditForm should be created',
+    name: 'A dor.grid.EditForm should be created',
     runTest: function(doh) {
-        var form = new wma.grid.EditForm();
-        doh.assertTrue(form instanceof wma.grid.EditForm);
+        var form = new dor.grid.EditForm();
+        doh.assertTrue(form instanceof dor.grid.EditForm);
     }
 },
 {

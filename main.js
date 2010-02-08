@@ -1,16 +1,16 @@
-dojo.provide("wma.main");
+dojo.provide("dor.main");
 
-dojo.require("wma.grid.NewButton");
-dojo.require("wma.grid.EditButton");
-dojo.require("wma.grid.DeleteButton");
-dojo.require("wma.grid.RailsRestStore");
-dojo.require("wma.grid.Grid");
-dojo.require("wma.grid.NewForm");
-dojo.require("wma.grid.EditForm");
-dojo.require("wma.grid.SearchForm");
-dojo.require("wma.grid.ItemDialog");
-dojo.require("wma.grid.PagingContainer");
-dojo.require("wma.grid.formatters");
+dojo.require("dor.grid.NewButton");
+dojo.require("dor.grid.EditButton");
+dojo.require("dor.grid.DeleteButton");
+dojo.require("dor.grid.RailsRestStore");
+dojo.require("dor.grid.Grid");
+dojo.require("dor.grid.NewForm");
+dojo.require("dor.grid.EditForm");
+dojo.require("dor.grid.SearchForm");
+dojo.require("dor.grid.ItemDialog");
+dojo.require("dor.grid.PagingContainer");
+dojo.require("dor.grid.formatters");
 
 dojo.require("dojo.date.locale");
 

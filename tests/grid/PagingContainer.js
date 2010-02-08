@@ -1,16 +1,16 @@
-dojo.provide("wma.tests.grid.PagingContainer");
+dojo.provide("dor.tests.grid.PagingContainer");
 
-dojo.require('wma.test.Suite');
-dojo.require("wma.grid.PagingContainer");
+dojo.require('dor.test.Suite');
+dojo.require("dor.grid.PagingContainer");
 
 
-wma.test.Suite.register("wma.tests.grid.PagingContainer", [
+dor.test.Suite.register("dor.tests.grid.PagingContainer", [
 {
-    name: 'A wma.grid.PagingContainer should be created',
+    name: 'A dor.grid.PagingContainer should be created',
     runTest: function(doh) {
         var grid = factory.gridMock({ id: 'grid' });
-        var container = new wma.grid.PagingContainer({ grid: factory.gridMock() });
-        doh.assertTrue(container instanceof wma.grid.PagingContainer);
+        var container = new dor.grid.PagingContainer({ grid: factory.gridMock() });
+        doh.assertTrue(container instanceof dor.grid.PagingContainer);
     }
 },
 {

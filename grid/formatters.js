@@ -1,4 +1,4 @@
-dojo.provide('wma.grid.formatters');
+dojo.provide('dor.grid.formatters');
 
 dojo.require("dojo.date.locale");
 

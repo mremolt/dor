@@ -1,10 +1,10 @@
-dojo.provide('wma.grid.NewForm');
+dojo.provide('dor.grid.NewForm');
 
-dojo.require('wma.grid.EditForm');
+dojo.require('dor.grid.EditForm');
 
 dojo.declare(
-    'wma.grid.NewForm',
-    wma.grid.EditForm,
+    'dor.grid.NewForm',
+    dor.grid.EditForm,
     {
         _fillStoreWithValues: function(store, values, item) {
             store.newItem(values);
